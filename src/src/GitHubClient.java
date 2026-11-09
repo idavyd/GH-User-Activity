@@ -13,13 +13,12 @@ public class GitHubClient {
     private final GitHubResponseHandler responseHandler = new GitHubResponseHandler();
 
 
-
     public void fetchUserActivity(String username) throws IOException, InterruptedException {
 
-        String URL = BASE_URL + "/users/" + username + "/events";
+        String fetchUserActivityURL = BASE_URL + "/users/" + username + "/events";
 
         HttpRequest request = HttpRequest.newBuilder()
-        .uri(URI.create(URL))
+        .uri(URI.create(fetchUserActivityURL))
         .GET()
         .build();
 
