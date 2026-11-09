@@ -29,3 +29,4 @@ out/
 target/
 .DS_Store
 Thumbs.db
+payload_example.json
