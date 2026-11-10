@@ -62,6 +62,11 @@ public class GitHubResponseHandler {
                         count,
                         repo));
             }
+
+            default -> {
+                System.out.println("Response code: " + response.statusCode());
+                System.out.println("Payload: " + response.body());
+            }
         }
         }
 }
